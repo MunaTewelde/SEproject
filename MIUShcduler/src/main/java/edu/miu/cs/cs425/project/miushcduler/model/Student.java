@@ -1,8 +1,9 @@
 package edu.miu.cs.cs425.project.miushcduler.model;
 
 import javax.persistence.*;
+import java.util.List;
 
-@Entity
+//@Entity
 @Table(name = "students")
 public class Student {
 
@@ -12,4 +13,7 @@ public class Student {
     private String fName;
     private  String lName;
     private  String email;
+
+    private List<Course> courses;
+
 }
