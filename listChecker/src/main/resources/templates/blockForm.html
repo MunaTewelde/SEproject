@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/form.css}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Title</title>
+</head>
+<body>
+<h2>block form</h2>
+
+<form method="post" th:action="@{/saveCourse}" th:object="${course}">
+    <p>block name: <input type="text" th:name="courseName"></p>
+    <p>course code: <input type="text" th:name="courseCode"></p>
+    <p>course name: <input type="text" th:name="courseDescription"></p>
+
+    <input type="submit" value="add block">
+
+</form>
+</body>
+</html>
